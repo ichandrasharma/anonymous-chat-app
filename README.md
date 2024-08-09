@@ -16,7 +16,7 @@ Designed for ease of use and anonymity, this chat app offers an intuitive and en
 <br>
 
 ### Output for brief
-<img src="/client/output/Screenshot (42)" alt="output" />
+<img src="/client/output/Screenshot(42)" alt="output" />
 <img src="/client/output/Screenshot (43)" alt="output" />
 
 <br>
