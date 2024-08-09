@@ -1,0 +1,237 @@
+/* General Reset */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #2a2730;
+}
+
+/* App Container */
+.App {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #2a2730;
+}
+
+/* Log In Form */
+.logIn {
+  width: 90%;
+  max-width: 600px;
+  border: 5px solid #9900ff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logIn input {
+  margin: 10px 0;
+  width: 100%;
+  max-width: 280px;
+  height: 45px;
+  border: 2px solid #9900ff;
+  background-color: transparent;
+  padding-left: 12px;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.logIn input:focus {
+  outline: none;
+  border-color: #037edc;
+}
+
+.logIn button {
+  width: 100%;
+  max-width: 280px;
+  height: 50px;
+  border: none;
+  background-color: #9900ff;
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logIn button:hover {
+  background-color: #037edc;
+}
+
+/* Chat Container */
+.chatContainer {
+  width: 90%;
+  max-width: 800px; /* Increased max-width for a larger container */
+  border: 5px solid #9900ff;
+  border-radius: 12px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Username and Group Boxes */
+.usernameGroupContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Space between username/group and chat area */
+}
+
+.usernameBox, .groupBox {
+  width: 48%; /* Width adjusted for a row layout */
+  height: 45px;
+  border: 2px solid #9900ff;
+  background-color: #2a2730;
+  color: white;
+  padding-left: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.usernameBox {
+  border-right: none; /* Remove right border to avoid double borders */
+}
+
+.groupBox {
+  border-left: none; /* Remove left border to avoid double borders */
+}
+
+/* Chat Area */
+.chatContainer .msg {
+  flex: 1;
+  width: 100%;
+  padding-left: 20px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.chatContainer .msgInputs {
+  display: flex;
+  align-items: center;
+}
+
+.chatContainer .msgInputs input {
+  flex: 1;
+  height: 45px;
+  border: none;
+  background-color: #2a2730;
+  padding-left: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  color: white;
+}
+
+.chatContainer .msgInputs button {
+  width: 100px;
+  height: 45px;
+  background-color: #9900ff;
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chatContainer .msgInputs button:hover {
+  background-color: #037edc;
+}
+
+/* Message Containers */
+.msgContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.msgContainer h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0;
+}
+
+#You,
+#Other {
+  display: flex;
+  flex-direction: column;
+}
+
+#You {
+  align-items: flex-start;
+}
+
+#Other {
+  align-items: flex-end;
+}
+
+#Other .msgIndividual {
+  background-color: #5ff064;
+  color: black;
+}
+
+.msgIndividual {
+  max-width: 85%;
+  min-width: 250px;
+  height: auto;
+  max-height: 100px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background-color: #9900ff;
+  opacity: 0.9;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .logIn, .chatContainer {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .logIn input, .logIn button,
+  .chatContainer .msgInputs input, .chatContainer .msgInputs button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .usernameGroupContainer {
+    flex-direction: column;
+  }
+
+  .usernameBox, .groupBox {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .chatContainer {
+    padding: 10px;
+  }
+
+  .msgIndividual {
+    max-width: 90%;
+    min-width: 120px;
+    max-height: 80px;
+  }
+}
